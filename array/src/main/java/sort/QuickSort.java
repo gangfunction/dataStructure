@@ -1,9 +1,8 @@
 package sort;
 
-import java.math.BigInteger;
 
 public class QuickSort {
-    public static void sort(BigInteger[] array, int low, int high) {
+    public static void sort(int[] array, int low, int high) {
         if (low < high) {
             int partitionIndex = partition(array, low, high);
 
@@ -13,13 +12,13 @@ public class QuickSort {
         }
     }
 
-    private static int partition(BigInteger[] array, int low, int high) {
-        BigInteger pivot = array[high];
+    private static int partition(int[] array, int low, int high) {
+        int pivot = array[high];
         int i = low - 1;
 
         for (int j = low; j < high; j++) {
             // 피벗을 기준으로 작은 값은 왼쪽으로 이동
-            if (array[j].compareTo(pivot) < 0) {
+            if (array[j] < pivot) {
                 i++;
                 swap(array, i, j);
             }
@@ -30,8 +29,8 @@ public class QuickSort {
         return i + 1;
     }
 
-    private static void swap(BigInteger[] array, int i, int j) {
-        BigInteger temp = array[i];
+    private static void swap(int[] array, int i, int j) {
+        int temp = array[i];
         array[i] = array[j];
         array[j] = temp;
     }

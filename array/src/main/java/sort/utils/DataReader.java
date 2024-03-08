@@ -3,7 +3,6 @@ package sort.utils;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,19 +15,19 @@ import java.util.List;
  */
 public class DataReader {
     private long[] dataForProcess =null;
-    static List<BigInteger> numbers = new ArrayList<>();
+    static List<Integer> numbers = new ArrayList<>();
 
-    public static BigInteger[] load(String url){
+    public static int[] load(String url){
         try{
             File target = new File(url);
             FileReader fileReader = new FileReader(target);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line;
             while((line = bufferedReader.readLine()) != null){
-                BigInteger number = new BigInteger(line);
+                int number = Integer.parseInt(line);
                 numbers.add(number);
             }
-            BigInteger[] data = new BigInteger[numbers.size()];
+            int[] data = new int[numbers.size()];
             for(int i = 0; i < numbers.size(); i++){
                 data[i] = numbers.get(i);
             }

@@ -3,13 +3,13 @@ package sort;
 import java.math.BigInteger;
 
 public class MergeSort {
-    public static void sort(BigInteger[] array) {
+    public static void sort(int[] array) {
         if (array.length < 2)
             return;
 
         int mid = array.length / 2;
-        BigInteger[] leftArray = new BigInteger[mid];
-        BigInteger[] rightArray = new BigInteger[array.length - mid];
+        int[] leftArray = new int[mid];
+        int[] rightArray = new int[array.length - mid];
 
         // 원본 배열을 두 부분으로 나누기
         System.arraycopy(array, 0, leftArray, 0, mid);
@@ -22,12 +22,12 @@ public class MergeSort {
         // 정렬된 두 부분을 합병
         merge(leftArray, rightArray, array);
     }
-    private static void merge(BigInteger[] leftArray, BigInteger[] rightArray, BigInteger[] array) {
+    private static void merge(int[] leftArray, int[] rightArray, int[] array) {
         int leftIndex = 0, rightIndex = 0, arrayIndex = 0;
 
         // 두 부분을 비교하여 합병
         while (leftIndex < leftArray.length && rightIndex < rightArray.length) {
-            if ( rightArray[rightIndex].compareTo(leftArray[leftIndex]) >= 0){
+            if ( rightArray[rightIndex]>=leftArray[leftIndex]){
                 array[arrayIndex++] = leftArray[leftIndex++];
             } else {
                 array[arrayIndex++] = rightArray[rightIndex++];

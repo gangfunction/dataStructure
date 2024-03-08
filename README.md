@@ -29,11 +29,29 @@
 ## Learning Content
 ### Learning Period
 - **시작 날짜**: [2024년 3월 6일]
-- **종료 날짜**: []
+- **종료 날짜**: [미정]
 
 ### Implementation Details
 이 프로젝트의 일부로 학습하고 구현한 특정 자료 구조에 대해 자세히 설명하는 리스트입니다..
 직면한 도전과 그것을 어떻게 극복했는지를 설명합니다. 
+
+1. **정렬(Sort)**
+   - [배열 구현 코드 링크](https://github.com/gangfunction/dataStructure/tree/master/array/src/main/java/sort)
+   - 버블정렬(Bubble Sort)
+   - 선택정렬(Selection Sort)
+   - 삽입정렬(Insertion Sort)
+   - 병합정렬(Merge Sort)
+   - 퀵정렬(Quick Sort)
+   - 힙 정렬(Heap Sort) - 미구현
+   - 트리 정렬(Tree Sort) - 미구현
+   - 팀 정렬(Tim Sort) - 미구현
+   - 블록 병합 정렬(Block Merge Sort) - 미구현
+   - 인트로 정렬(Intro Sort) - 미구현
+   - 기수 정렬(Radix Sort) - 미구현
+   - 계수 정렬(Counting Sort) - 미구현
+   - 셸 정렬(Shell Sort) - 미구현
+   - 대기 정렬(Bucket Sort) - 미구현
+   - 중력 정렬(Gravity Sort) - 미구현
 
 1. **배열(Array) -미구현**
     - [배열 구현 코드 링크](#)
