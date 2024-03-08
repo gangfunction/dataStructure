@@ -49,7 +49,7 @@ public class Main {
     @Setup
     public void setup() {
         Random random = new Random();
-        dataset = new Random().ints(datasetSize, Integer.MIN_VALUE, Integer.MAX_VALUE).toArray();
+        dataset = random.ints(datasetSize, Integer.MIN_VALUE, Integer.MAX_VALUE).toArray();
     }
 
     @Benchmark
